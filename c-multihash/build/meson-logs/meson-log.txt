@@ -1,0 +1,65 @@
+Build started at 2019-11-05T17:46:42.912817
+Main binary: /usr/bin/python
+Build Options: 
+Python system: Linux
+The Meson build system
+Version: 0.52.0
+Source dir: /home/user/dev/c-ipfs/c-libp2p/c-multihash
+Build dir: /home/user/dev/c-ipfs/c-libp2p/c-multihash/build
+Build type: native build
+Project name: c-multihash
+Project version: 0.1
+No CFLAGS in the environment, not changing global flags.
+No LDFLAGS in the environment, not changing global flags.
+No CPPFLAGS in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/sanitycheckc.c -o /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 9.2.0 "cc (GCC) 9.2.0")
+C linker for the build machine: GNU ld.bfd 2.33.1
+No CFLAGS in the environment, not changing global flags.
+No LDFLAGS in the environment, not changing global flags.
+No CPPFLAGS in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/sanitycheckc.c -o /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/sanitycheckc.exe
+C compiler for the host machine: cc (gcc 9.2.0 "cc (GCC) 9.2.0")
+C linker for the host machine: GNU ld.bfd 2.33.1
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Adding test "multihash test_errors_string"
+Adding test "multihash test_hashes_code"
+Adding test "multihash test_hashes_length"
+Build targets in project: 4
+Found ninja-1.9.0 at /usr/bin/ninja
+Running compile:
+Working directory:  /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/tmpd7y95v6a
+Command line:  cc /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/tmpd7y95v6a/testfile.c -o /home/user/dev/c-ipfs/c-libp2p/c-multihash/build/meson-private/tmpd7y95v6a/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/
+programs: =/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu/9.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../x86_64-pc-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../x86_64-pc-linux-gnu/lib/x86_64-pc-linux-gnu/9.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../x86_64-pc-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../x86_64-pc-linux-gnu/9.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../lib/:/lib/x86_64-pc-linux-gnu/9.2.0/:/lib/../lib/:/usr/lib/x86_64-pc-linux-gnu/9.2.0/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/9.2.0/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 

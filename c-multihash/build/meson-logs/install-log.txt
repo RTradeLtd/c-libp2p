@@ -1,0 +1,10 @@
+# List of files installed by Meson
+# Does not contain files installed by custom scripts.
+/usr/local/lib/libmultihash.so
+/usr/local/include/multihash/errors.h
+/usr/local/include/multihash/generic.h
+/usr/local/include/multihash/hashes.h
+/usr/local/include/multihash/multihash.h
+/usr/local/lib/pkgconfig/multihash.pc
+/usr/local/lib/pkgconfig
+/usr/local/include/multihash

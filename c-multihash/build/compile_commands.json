@@ -1,0 +1,38 @@
+[
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-multihash/build",
+    "command": "cc -Isrc/25a6634@@multihash@sha -Isrc -I../src -Iinclude -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -fPIC -MD -MQ 'src/25a6634@@multihash@sha/errors.c.o' -MF 'src/25a6634@@multihash@sha/errors.c.o.d' -o 'src/25a6634@@multihash@sha/errors.c.o' -c ../src/errors.c",
+    "file": "../src/errors.c",
+    "output": "src/25a6634@@multihash@sha/errors.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-multihash/build",
+    "command": "cc -Isrc/25a6634@@multihash@sha -Isrc -I../src -Iinclude -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -fPIC -MD -MQ 'src/25a6634@@multihash@sha/hashes.c.o' -MF 'src/25a6634@@multihash@sha/hashes.c.o.d' -o 'src/25a6634@@multihash@sha/hashes.c.o' -c ../src/hashes.c",
+    "file": "../src/hashes.c",
+    "output": "src/25a6634@@multihash@sha/hashes.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-multihash/build",
+    "command": "cc -Isrc/25a6634@@multihash@sha -Isrc -I../src -Iinclude -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -fPIC -MD -MQ 'src/25a6634@@multihash@sha/multihash.c.o' -MF 'src/25a6634@@multihash@sha/multihash.c.o.d' -o 'src/25a6634@@multihash@sha/multihash.c.o' -c ../src/multihash.c",
+    "file": "../src/multihash.c",
+    "output": "src/25a6634@@multihash@sha/multihash.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-multihash/build",
+    "command": "cc -Itests/59830eb@@test_errors_string@exe -Itests -I../tests -Iinclude -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -MD -MQ 'tests/59830eb@@test_errors_string@exe/c_test_errors_string.c.o' -MF 'tests/59830eb@@test_errors_string@exe/c_test_errors_string.c.o.d' -o 'tests/59830eb@@test_errors_string@exe/c_test_errors_string.c.o' -c ../tests/c/test_errors_string.c",
+    "file": "../tests/c/test_errors_string.c",
+    "output": "tests/59830eb@@test_errors_string@exe/c_test_errors_string.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-multihash/build",
+    "command": "cc -Itests/59830eb@@test_hashes_code@exe -Itests -I../tests -Iinclude -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -MD -MQ 'tests/59830eb@@test_hashes_code@exe/c_test_hashes_code.c.o' -MF 'tests/59830eb@@test_hashes_code@exe/c_test_hashes_code.c.o.d' -o 'tests/59830eb@@test_hashes_code@exe/c_test_hashes_code.c.o' -c ../tests/c/test_hashes_code.c",
+    "file": "../tests/c/test_hashes_code.c",
+    "output": "tests/59830eb@@test_hashes_code@exe/c_test_hashes_code.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-multihash/build",
+    "command": "cc -Itests/59830eb@@test_hashes_length@exe -Itests -I../tests -Iinclude -I../include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -MD -MQ 'tests/59830eb@@test_hashes_length@exe/c_test_hashes_length.c.o' -MF 'tests/59830eb@@test_hashes_length@exe/c_test_hashes_length.c.o.d' -o 'tests/59830eb@@test_hashes_length@exe/c_test_hashes_length.c.o' -c ../tests/c/test_hashes_length.c",
+    "file": "../tests/c/test_hashes_length.c",
+    "output": "tests/59830eb@@test_hashes_length@exe/c_test_hashes_length.c.o"
+  }
+]

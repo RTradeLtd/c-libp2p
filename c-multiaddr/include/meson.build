@@ -1,0 +1,1 @@
+install_headers('multiaddr/base58.h', 'multiaddr/endian.h', 'multiaddr/multiaddr.h', 'multiaddr/protocols.h', 'multiaddr/protoutils.h', 'multiaddr/varhexutils.h', 'multiaddr/varint.h', subdir: 'multiaddr')

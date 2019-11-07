@@ -28,8 +28,8 @@ static int num_bootstrap_nodes = 0;
 struct bs_struct {
     char *ip;
     uint16_t port;
-} bootstrap_list[] = {
 };
+struct bs_struct* bs_list = 0;
 
 pthread_t pth_kademlia, pth_announce;
 time_t tosleep = 0;

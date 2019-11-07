@@ -1,0 +1,44 @@
+[
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build",
+    "command": "cc -Iipfs_protobuf@sha -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -fPIC -MD -MQ 'ipfs_protobuf@sha/main.c.o' -MF 'ipfs_protobuf@sha/main.c.o.d' -o 'ipfs_protobuf@sha/main.c.o' -c ../main.c",
+    "file": "../main.c",
+    "output": "ipfs_protobuf@sha/main.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build",
+    "command": "cc -Iipfs_protobuf@sha -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -fPIC -MD -MQ 'ipfs_protobuf@sha/protobuf.c.o' -MF 'ipfs_protobuf@sha/protobuf.c.o.d' -o 'ipfs_protobuf@sha/protobuf.c.o' -c ../protobuf.c",
+    "file": "../protobuf.c",
+    "output": "ipfs_protobuf@sha/protobuf.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build",
+    "command": "cc -Iipfs_protobuf@sha -I. -I.. -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -fPIC -MD -MQ 'ipfs_protobuf@sha/varint.c.o' -MF 'ipfs_protobuf@sha/varint.c.o.d' -o 'ipfs_protobuf@sha/varint.c.o' -c ../varint.c",
+    "file": "../varint.c",
+    "output": "ipfs_protobuf@sha/varint.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build",
+    "command": "cc -Itest/9f86d08@@test_protobuf@exe -Itest -I../test -I. -I../ -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -MD -MQ 'test/9f86d08@@test_protobuf@exe/Test1_protobuf.c.o' -MF 'test/9f86d08@@test_protobuf@exe/Test1_protobuf.c.o.d' -o 'test/9f86d08@@test_protobuf@exe/Test1_protobuf.c.o' -c ../test/Test1_protobuf.c",
+    "file": "../test/Test1_protobuf.c",
+    "output": "test/9f86d08@@test_protobuf@exe/Test1_protobuf.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build",
+    "command": "cc -Itest/9f86d08@@test_protobuf@exe -Itest -I../test -I. -I../ -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -MD -MQ 'test/9f86d08@@test_protobuf@exe/Test2_protobuf.c.o' -MF 'test/9f86d08@@test_protobuf@exe/Test2_protobuf.c.o.d' -o 'test/9f86d08@@test_protobuf@exe/Test2_protobuf.c.o' -c ../test/Test2_protobuf.c",
+    "file": "../test/Test2_protobuf.c",
+    "output": "test/9f86d08@@test_protobuf@exe/Test2_protobuf.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build",
+    "command": "cc -Itest/9f86d08@@test_protobuf@exe -Itest -I../test -I. -I../ -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -MD -MQ 'test/9f86d08@@test_protobuf@exe/Test3_protobuf.c.o' -MF 'test/9f86d08@@test_protobuf@exe/Test3_protobuf.c.o.d' -o 'test/9f86d08@@test_protobuf@exe/Test3_protobuf.c.o' -c ../test/Test3_protobuf.c",
+    "file": "../test/Test3_protobuf.c",
+    "output": "test/9f86d08@@test_protobuf@exe/Test3_protobuf.c.o"
+  },
+  {
+    "directory": "/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build",
+    "command": "cc -Itest/9f86d08@@test_protobuf@exe -Itest -I../test -I. -I../ -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -Wpedantic -g -MD -MQ 'test/9f86d08@@test_protobuf@exe/testit.c.o' -MF 'test/9f86d08@@test_protobuf@exe/testit.c.o.d' -o 'test/9f86d08@@test_protobuf@exe/testit.c.o' -c ../test/testit.c",
+    "file": "../test/testit.c",
+    "output": "test/9f86d08@@test_protobuf@exe/testit.c.o"
+  }
+]
