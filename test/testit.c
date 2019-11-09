@@ -193,6 +193,7 @@ int main(int argc, char** argv) {
 	char* test_name_wanted = NULL;
 	int certain_tests = 0;
 	int current_test_arg = 1;
+   int result = 1;
 	if(argc > 1) {
 		certain_tests = 1;
 	}
@@ -226,11 +227,12 @@ int main(int argc, char** argv) {
 			fprintf(stderr, "***** There were %d failed (out of %d) test(s) *****\n", counter, tests_ran);
 		} else {
 			fprintf(stderr, "All %d tests passed\n", tests_ran);
+         result = 0;
 		}
 	}
 	libp2p_logger_free();
 	fclose(stdin);
 	fclose(stdout);
 	fclose(stderr);
-	return 1;
+	return result;
 }

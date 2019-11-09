@@ -1,7 +1,7 @@
 #include "ipfs/journal/journal_message.h"
 #include "ipfs/journal/journal_entry.h"
 #include "libp2p/utils/logger.h"
-#include "protobuf.h"
+#include "libp2p/protobuf.h"
 
 struct JournalMessage* ipfs_journal_message_new() {
 	struct JournalMessage *message = (struct JournalMessage*) malloc(sizeof(struct JournalMessage));

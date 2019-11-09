@@ -1,7 +1,7 @@
 #ifndef IPNS_NAMESYS_ROUTING_H
     #define IPNS_NAMESYS_ROUTING_H
 
-    #include "mh/multihash.h"
+    #include "multihash/multihash.h"
     #include "ipfs/util/time.h"
     #include "ipfs/namesys/pb.h"
 

@@ -4,7 +4,7 @@
 #include "libp2p/routing/kademlia.h"
 #include "libp2p/peer/providerstore.h"
 #include "libp2p/utils/vector.h"
-#include "ipfs/thirdparty/ipfsaddr/ipfs_addr.h"
+#include "ipfs/ipfsaddr/ipfs_addr.h"
 
 /**
  * Routing using Kademlia and DHT

@@ -3,7 +3,7 @@
  */
 #include "libp2p/utils/logger.h"
 #include "ipfs/journal/journal_entry.h"
-#include "protobuf.h"
+#include "libp2p/protobuf.h"
 
 struct JournalEntry* ipfs_journal_entry_new() {
 	struct JournalEntry* journal_entry = (struct JournalEntry*) malloc(sizeof(struct JournalEntry));

@@ -1,7 +1,7 @@
 #include <string.h>
 #include <errno.h>
 
-#include "varint.h"
+#include "libp2p/varint.h"
 #include "lmdb.h"
 #include "libp2p/utils/logger.h"
 #include "libp2p/crypto/encoding/base58.h"

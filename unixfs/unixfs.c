@@ -10,8 +10,8 @@
 #include "libp2p/crypto/sha256.h"
 #include "libp2p/utils/logger.h"
 #include "ipfs/unixfs/unixfs.h"
-#include "protobuf.h"
-#include "varint.h"
+#include "libp2p/protobuf.h"
+#include "libp2p/varint.h"
 
 /**
  * The protobuf info:

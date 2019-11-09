@@ -18,7 +18,7 @@
 #include "ipfs/repo/fsrepo/lmdb_datastore.h"
 #include "ipfs/repo/fsrepo/journalstore.h"
 #include "libp2p/db/datastore.h"
-#include "varint.h"
+#include "libp2p/varint.h"
 
 /**
  * Build a "value" section for a datastore record

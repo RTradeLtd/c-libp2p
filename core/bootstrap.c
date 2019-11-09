@@ -4,7 +4,7 @@
 #include "libp2p/utils/logger.h"
 #include "ipfs/routing/routing.h"
 #include "ipfs/core/ipfs_node.h"
-#include "ipfs/thirdparty/ipfsaddr/ipfs_addr.h"
+#include "ipfs/ipfsaddr/ipfs_addr.h"
 #include "multiaddr/multiaddr.h"
 
 /***

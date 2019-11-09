@@ -5,7 +5,7 @@
 #include <time.h>
 #include "ipfs/namesys/routing.h"
 #include "ipfs/util/time.h"
-#include "mh/multihash.h"
+#include "multihash/multihash.h"
 #include "ipfs/namesys/pb.h"
 #include "ipfs/namesys/namesys.h"
 #include "ipfs/cid/cid.h"

@@ -8,8 +8,8 @@
 #include <strings.h>
 #include "inttypes.h"
 
-#include "mh/multihash.h"
-#include "mh/hashes.h"
+#include "multihash/multihash.h"
+#include "multihash/hashes.h"
 #include "ipfs/cid/cid.h"
 #include "ipfs/merkledag/node.h"
 #include "ipfs/unixfs/unixfs.h"

@@ -9,9 +9,9 @@
 #include "ipfs/cid/cid.h"
 #include "libp2p/crypto/encoding/base58.h"
 #include "ipfs/multibase/multibase.h"
-#include "mh/hashes.h"
-#include "mh/multihash.h"
-#include "varint.h"
+#include "multihash/hashes.h"
+#include "multihash/multihash.h"
+#include "libp2p/varint.h"
 
 enum WireType ipfs_cid_message_fields[] = { WIRETYPE_VARINT, WIRETYPE_VARINT, WIRETYPE_LENGTH_DELIMITED };
 

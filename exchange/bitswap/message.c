@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include "protobuf.h"
-#include "varint.h"
+#include "libp2p/protobuf.h"
+#include "libp2p/varint.h"
 #include "libp2p/utils/vector.h"
 #include "ipfs/blocks/block.h"
 #include "ipfs/exchange/bitswap/message.h"

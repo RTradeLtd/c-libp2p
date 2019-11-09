@@ -1,7 +1,7 @@
 #include <string.h>
 
-#include "mh/hashes.h"
-#include "mh/multihash.h"
+#include "multihash/hashes.h"
+#include "multihash/multihash.h"
 
 #include "ipfs/cid/cid.h"
 #include "ipfs/multibase/multibase.h"

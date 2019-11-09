@@ -6,8 +6,8 @@
 #include <string.h>
 
 #include "libp2p/crypto/sha256.h"
-#include "mh/multihash.h"
-#include "mh/hashes.h"
+#include "multihash/multihash.h"
+#include "multihash/hashes.h"
 #include "ipfs/merkledag/merkledag.h"
 #include "ipfs/unixfs/unixfs.h"
 

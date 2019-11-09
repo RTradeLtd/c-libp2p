@@ -6,7 +6,7 @@
 #define __IPFS_CID_CID_H
 
 #include <stddef.h>
-#include "protobuf.h"
+#include "libp2p/protobuf.h"
 
 // these are multicodec packed content types. They should match
 // the codes described in the authoratative document:
