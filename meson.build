@@ -4,6 +4,9 @@ project('c-libp2p', 'c',
 cc = meson.get_compiler('c')
 m_dep = cc.find_library('m', required: false)
 thread_dep = dependency('threads')
+mbedtls_dep = declare_dependency(dependencies: [cc.find_library('mbedcrypto'),
+                                                cc.find_library('mbedtls'),
+                                                cc.find_library('mbedx509')])
 
 libp2p_inc = include_directories('include')
 
@@ -45,7 +48,6 @@ libp2p_sources = [conn_sources,
 subdir('c-multiaddr')
 subdir('c-multihash')
 subdir('c-protobuf')
-subdir('vendor/mbedtls')
 
 libp2p_lib = library('libp2p', libp2p_sources, include_directories: libp2p_inc,
                      dependencies: [multiaddr_dep, multihash_dep, protobuf_dep, mbedtls_dep, thread_dep, m_dep],
