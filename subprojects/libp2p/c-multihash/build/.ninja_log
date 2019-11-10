@@ -1,0 +1,18 @@
+# ninja log v5
+0	24	1572997606010590144	src/25a6634@@multihash@sha/errors.c.o	d349d7e0e020e7e8
+0	32	1572997606017256731	src/25a6634@@multihash@sha/hashes.c.o	d7bae87f3600fb18
+1	33	1572997606017256731	tests/59830eb@@test_errors_string@exe/c_test_errors_string.c.o	990098ff769c1de8
+1	36	1572997606020590024	tests/59830eb@@test_hashes_length@exe/c_test_hashes_length.c.o	741d145b599fb5a4
+0	37	1572997606023923317	src/25a6634@@multihash@sha/multihash.c.o	426238d00741d716
+1	39	1572997606023923317	tests/59830eb@@test_hashes_code@exe/c_test_hashes_code.c.o	5ef1b374e4c9bbe3
+37	56	1572997606040589784	src/libmultihash.so	752a47ea2a6c558e
+56	279	1572997606243920671	src/25a6634@@multihash@sha/libmultihash.so.symbols	57f1ddcf53dbf2bb
+279	298	1572997606283920189	tests/test_hashes_length	87684da1a31452d5
+279	304	1572997606290586776	tests/test_errors_string	c811b7f47d8db2d0
+279	304	1572997606290586776	tests/test_hashes_code	92b01190c1479d02
+0	222	0	meson-test	3e2f4d9c0df100a8
+0	192	0	meson-uninstall	cc991f1d37a0db31
+0	211	0	meson-install	9bd7faa9472bf40f
+0	192	0	meson-uninstall	cc991f1d37a0db31
+0	207	0	meson-install	9bd7faa9472bf40f
+0	193	0	meson-uninstall	cc991f1d37a0db31

@@ -1,0 +1,9 @@
+prefix=/usr/local
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libipfs_protobuf
+Description: An implementation of protobuf for c-ipfs
+Version: 0.1
+Libs: -L${libdir} -lipfs_protobuf
+Cflags: -I${includedir}/c-ipfs

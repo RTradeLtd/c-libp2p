@@ -1,0 +1,33 @@
+# Maintainer: Nathan Hourt <nat.hourt@gmail.com>
+# To generate package:
+#  - In source directory, run `meson build`
+#  - In source/build directory, run `ninja dist`
+#  - In source/build/meson-dist directory, run `makepkg`
+pkgname=c-libp2p
+pkgver=0.1
+pkgrel=1
+pkgdesc="An implementation of Protocol Labs' libp2p in C"
+arch=('x86' 'x86_64')
+url="https://github.com/nathanhourt/c-libp2p"
+license=('MIT')
+depends=('mbedtls')
+makedepends=('gcc' 'meson')
+source=($pkgname-$pkgver.tar.xz)
+sha256sums=('SKIP')
+
+build() {
+	cd "$srcdir/$pkgname-$pkgver"
+   meson --prefix=/usr build
+   cd build
+   ninja
+}
+
+check() {
+	cd "$srcdir/$pkgname-$pkgver/build"
+   ninja test
+}
+
+package() {
+	cd "$srcdir/$pkgname-$pkgver/build"
+	DESTDIR="$pkgdir/" ninja install
+}
