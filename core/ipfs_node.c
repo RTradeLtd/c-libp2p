@@ -98,10 +98,10 @@ int ipfs_node_online_new(const char* repo_path, struct IpfsNode** node) {
 	local_node->blockstore = ipfs_blockstore_new(fs_repo);
 	local_node->protocol_handlers = ipfs_node_online_build_protocol_handlers(local_node);
 	local_node->mode = MODE_OFFLINE;
-	local_node->routing = ipfs_routing_new_online(local_node, &fs_repo->config->identity->private_key);
+   local_node->swarm = libp2p_swarm_new(local_node->protocol_handlers, local_node->repo->config->datastore, local_node->repo->config->filestore);
+   local_node->dialer = libp2p_conn_dialer_new(local_node->identity->peer, local_node->peerstore, &local_node->identity->private_key, local_node->swarm);
+   local_node->routing = ipfs_routing_new_online(local_node, &fs_repo->config->identity->private_key);
 	local_node->exchange = ipfs_bitswap_new(local_node);
-	local_node->swarm = libp2p_swarm_new(local_node->protocol_handlers, local_node->repo->config->datastore, local_node->repo->config->filestore);
-	local_node->dialer = libp2p_conn_dialer_new(local_node->identity->peer, local_node->peerstore, &local_node->identity->private_key, local_node->swarm);
 
 	// fire up the API
 	api_start(local_node, 10, 5);

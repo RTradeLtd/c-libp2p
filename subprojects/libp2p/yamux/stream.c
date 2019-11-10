@@ -392,7 +392,8 @@ void* yamux_read_method(void* args) {
 			return NULL;
 		}
 		if (context->child_stream->read(context->child_stream->stream_context, &message, 5) && message != NULL) {
-			libp2p_logger_debug("yamux", "read_method: read returned a message of %d bytes. [%s]\n", message->data_size, message->data);
+         libp2p_logger_debug("yamux", "read_method: read returned a message of %d bytes. [%.*s]\n",
+                             message->data_size, message->data_size, message->data);
 			int retVal = libp2p_protocol_marshal(message, context->child_stream, context->yamux_context->protocol_handlers);
 			libp2p_logger_debug("yamux", "read_method: protocol_marshal returned %d.\n", retVal);
 			libp2p_stream_message_free(message);

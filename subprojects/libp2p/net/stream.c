@@ -15,6 +15,7 @@ struct Stream* libp2p_stream_new() {
 		stream->address = NULL;
 		stream->close = NULL;
 		stream->parent_stream = NULL;
+      stream->stream_type = STREAM_TYPE_UNKNOWN;
 		stream->peek = NULL;
 		stream->read = NULL;
 		stream->read_raw = NULL;

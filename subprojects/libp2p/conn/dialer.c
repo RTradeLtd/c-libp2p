@@ -31,6 +31,7 @@ struct Dialer* libp2p_conn_dialer_new(struct Libp2pPeer* peer, struct Peerstore*
       dialer->peerstore = peerstore;
       dialer->private_key = rsa_private_key;
       dialer->transport_dialers = NULL;
+      dialer->peer_id = NULL;
       dialer->fallback_dialer = libp2p_conn_tcp_transport_dialer_new(dialer->peer_id, rsa_private_key);
       dialer->swarm = swarm;
       if (peer != NULL) {
@@ -93,8 +94,11 @@ struct Stream* libp2p_conn_dialer_get_connection(const struct Dialer* dialer, co
  * @returns true(1) on success, false(0) otherwise
  */
 int libp2p_conn_dialer_join_swarm(const struct Dialer* dialer, struct Libp2pPeer* peer, int timeout_secs) {
-   if (dialer == NULL || peer == NULL)
+   if (dialer == NULL || peer == NULL) {
+      libp2p_logger_error("dialer", "Something important wasn't given; cannot continue. dialer: %p, peer: %p\n",
+                          dialer, peer);
       return 0;
+   }
    // find the right Multiaddress
    struct Libp2pLinkedList* current_entry = peer->addr_head;
    struct Stream* conn_stream = NULL;

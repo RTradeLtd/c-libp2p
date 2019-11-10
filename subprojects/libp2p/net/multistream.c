@@ -462,6 +462,7 @@ struct Stream* libp2p_net_multistream_stream_new(struct Stream* parent_stream, i
 	struct Stream* out = (struct Stream*)malloc(sizeof(struct Stream));
 	if (out != NULL) {
 		out->stream_type = STREAM_TYPE_MULTISTREAM;
+      out->channel = 0;
 		out->parent_stream = parent_stream;
 		out->close = libp2p_net_multistream_close;
 		out->read = libp2p_net_multistream_read;
@@ -530,7 +531,7 @@ int libp2p_net_multistream_handle_message(const struct StreamMessage* msg, struc
 	// the incoming stream is not a multistream. They are attempting to upgrade to multistream
 	struct Stream* new_stream = libp2p_net_multistream_stream_new(stream, 1);
 	if (new_stream != NULL) {
-		struct MultistreamContext* ctx = (struct MultistreamContext*)stream->stream_context;
+      struct MultistreamContext* ctx = (struct MultistreamContext*)new_stream->stream_context;
 		ctx->status = multistream_status_ack;
 		// upgrade
 		return stream->handle_upgrade(stream, new_stream);
