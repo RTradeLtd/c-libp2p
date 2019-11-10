@@ -16,26 +16,26 @@ struct Libp2pVector* logger_classes = NULL;
  * Initialize the logger. This should be done only once.
  */
 void libp2p_logger_init() {
-	logger_classes = libp2p_utils_vector_new(1);
+   logger_classes = libp2p_utils_vector_new(1);
 }
 
 /***
  * Checks to see if the logger has been initialized
  */
 int libp2p_logger_initialized() {
-	if (logger_classes == NULL)
-		return 0;
-	return 1;
+   if (logger_classes == NULL)
+      return 0;
+   return 1;
 }
 
 int libp2p_logger_free() {
-	if (logger_classes != NULL) {
-		for(int i = 0; i < logger_classes->total; i++) {
-			free((char*)libp2p_utils_vector_get(logger_classes, i));
-		}
-		libp2p_utils_vector_free(logger_classes);
-	}
-	return 1;
+   if (logger_classes != NULL) {
+      for(int i = 0; i < logger_classes->total; i++) {
+         free((char*)libp2p_utils_vector_get(logger_classes, i));
+      }
+      libp2p_utils_vector_free(logger_classes);
+   }
+   return 1;
 }
 
 /***
@@ -43,24 +43,27 @@ int libp2p_logger_free() {
  * @param str the class name to watch
  */
 void libp2p_logger_add_class(const char* str) {
-	if (!libp2p_logger_initialized())
-		libp2p_logger_init();
-	char* ptr = malloc(strlen(str) + 1);
-	strcpy(ptr, str);
-	libp2p_utils_vector_add(logger_classes, ptr);
+   if (!libp2p_logger_initialized())
+      libp2p_logger_init();
+   char* ptr = malloc(strlen(str) + 1);
+   strcpy(ptr, str);
+   libp2p_utils_vector_add(logger_classes, ptr);
 }
 
 /**
  * Determines if this "class" is to be logged
  * @param str the "class" to check
- * @returns true(1) if found, false(0) otherwise
+ * @returns true(1) if found or if log level is VERBOSE, false(0) otherwise
  */
 int libp2p_logger_watching_class(const char* str) {
-	for(int i = 0; i < logger_classes->total; i++) {
-		if (strcmp(libp2p_utils_vector_get(logger_classes, i), str) == 0)
-			return 1;
-	}
-	return 0;
+   for(int i = 0; i < logger_classes->total; i++) {
+      if (strcmp(libp2p_utils_vector_get(logger_classes, i), str) == 0)
+         return 1;
+   }
+   // In verbose logging, all classes are watched
+   if (CURRENT_LOGLEVEL == LOGLEVEL_VERBOSE)
+      return 1;
+   return 0;
 }
 
 /***
@@ -69,22 +72,22 @@ int libp2p_logger_watching_class(const char* str) {
  * @returns "Error", "Debug", etc.
  */
 char* libp2p_logger_log_level_to_string(int log_level) {
-	switch (log_level) {
-		case (LOGLEVEL_CRITICAL):
-			return "Critical";
-		case (LOGLEVEL_NONE):
-			return "None";
-		case (LOGLEVEL_ERROR):
-			return "Error";
-		case (LOGLEVEL_INFO):
-			return "Info";
-		case (LOGLEVEL_DEBUG):
-			return "Debug";
-		case (LOGLEVEL_VERBOSE):
-			return "Verbose";
-		default:
-			return "Unknown";
-	}
+   switch (log_level) {
+   case (LOGLEVEL_CRITICAL):
+      return "Critical";
+   case (LOGLEVEL_NONE):
+      return "None";
+   case (LOGLEVEL_ERROR):
+      return "Error";
+   case (LOGLEVEL_INFO):
+      return "Info";
+   case (LOGLEVEL_DEBUG):
+      return "Debug";
+   case (LOGLEVEL_VERBOSE):
+      return "Verbose";
+   default:
+      return "Unknown";
+   }
 }
 /**
  * Log a message to the console
@@ -94,19 +97,19 @@ char* libp2p_logger_log_level_to_string(int log_level) {
  * @param ... params
  */
 void libp2p_logger_log(const char* area, int log_level, const char* format, ...) {
-	if (!libp2p_logger_initialized())
-		libp2p_logger_init();
-	if (log_level <= CURRENT_LOGLEVEL) {
-		if (libp2p_logger_watching_class(area)) {
-			int new_format_size = strlen(format) + strlen(area) + strlen(libp2p_logger_log_level_to_string(log_level)) + 10;
-			char new_format[new_format_size];
-			sprintf(&new_format[0], "[%s][%s] %s", libp2p_logger_log_level_to_string(log_level), area, format);
-			va_list argptr;
-			va_start(argptr, format);
-			vfprintf(stderr, new_format, argptr);
-			va_end(argptr);
-		}
-	}
+   if (!libp2p_logger_initialized())
+      libp2p_logger_init();
+   if (log_level <= CURRENT_LOGLEVEL) {
+      if (libp2p_logger_watching_class(area)) {
+         int new_format_size = strlen(format) + strlen(area) + strlen(libp2p_logger_log_level_to_string(log_level)) + 10;
+         char new_format[new_format_size];
+         sprintf(&new_format[0], "[%s][%s] %s", libp2p_logger_log_level_to_string(log_level), area, format);
+         va_list argptr;
+         va_start(argptr, format);
+         vfprintf(stderr, new_format, argptr);
+         va_end(argptr);
+      }
+   }
 }
 
 /**
@@ -117,23 +120,23 @@ void libp2p_logger_log(const char* area, int log_level, const char* format, ...)
  * @param ... params
  */
 void libp2p_logger_vlog(const char* area, int log_level, const char* format, va_list argptr) {
-	if (!libp2p_logger_initialized())
-		libp2p_logger_init();
-	// only allow a message if the message log level is less than the current loglevel
-	if (log_level <= CURRENT_LOGLEVEL) {
-		int found = 0;
-		// error should always be printed for now. We need to think about this more...
-		if (log_level <= LOGLEVEL_ERROR )
-			found = 1;
-		else
-			found = libp2p_logger_watching_class(area);
-		if (found) {
-			int new_format_size = strlen(format) + strlen(area) + strlen(libp2p_logger_log_level_to_string(log_level)) + 10;
-			char new_format[new_format_size];
-			sprintf(&new_format[0], "[%s][%s] %s", libp2p_logger_log_level_to_string(log_level), area, format);
-			vfprintf(stderr, new_format, argptr);
-		}
-	}
+   if (!libp2p_logger_initialized())
+      libp2p_logger_init();
+   // only allow a message if the message log level is less than the current loglevel
+   if (log_level <= CURRENT_LOGLEVEL) {
+      int found = 0;
+      // error should always be printed for now. We need to think about this more...
+      if (log_level <= LOGLEVEL_ERROR )
+         found = 1;
+      else
+         found = libp2p_logger_watching_class(area);
+      if (found) {
+         int new_format_size = strlen(format) + strlen(area) + strlen(libp2p_logger_log_level_to_string(log_level)) + 10;
+         char new_format[new_format_size];
+         sprintf(&new_format[0], "[%s][%s] %s", libp2p_logger_log_level_to_string(log_level), area, format);
+         vfprintf(stderr, new_format, argptr);
+      }
+   }
 }
 
 /**
@@ -143,10 +146,10 @@ void libp2p_logger_vlog(const char* area, int log_level, const char* format, va_
  * @param ... params
  */
 void libp2p_logger_debug(const char* area, const char* format, ...) {
-	va_list argptr;
-	va_start(argptr, format);
-	libp2p_logger_vlog(area, LOGLEVEL_DEBUG, format, argptr);
-	va_end(argptr);
+   va_list argptr;
+   va_start(argptr, format);
+   libp2p_logger_vlog(area, LOGLEVEL_DEBUG, format, argptr);
+   va_end(argptr);
 }
 
 /**
@@ -156,10 +159,10 @@ void libp2p_logger_debug(const char* area, const char* format, ...) {
  * @param ... params
  */
 void libp2p_logger_error(const char* area, const char* format, ...) {
-	va_list argptr;
-	va_start(argptr, format);
-	libp2p_logger_vlog(area, LOGLEVEL_ERROR, format, argptr);
-	va_end(argptr);
+   va_list argptr;
+   va_start(argptr, format);
+   libp2p_logger_vlog(area, LOGLEVEL_ERROR, format, argptr);
+   va_end(argptr);
 }
 
 /**
@@ -169,8 +172,8 @@ void libp2p_logger_error(const char* area, const char* format, ...) {
  * @param ... params
  */
 void libp2p_logger_info(const char* area, const char* format, ...) {
-	va_list argptr;
-	va_start(argptr, format);
-	libp2p_logger_vlog(area, LOGLEVEL_INFO, format, argptr);
-	va_end(argptr);
+   va_list argptr;
+   va_start(argptr, format);
+   libp2p_logger_vlog(area, LOGLEVEL_INFO, format, argptr);
+   va_end(argptr);
 }
