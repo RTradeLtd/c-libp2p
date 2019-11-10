@@ -1,0 +1,1 @@
+crypto_sources = files( 'aes.c', 'ephemeral.c', 'key.c', 'peerutils.c', 'rsa.c', 'sha1.c', 'sha256.c', 'sha512.c', 'encoding/base16.c', 'encoding/base32.c', 'encoding/base58.c', 'encoding/base64.c', 'encoding/x509.c' )

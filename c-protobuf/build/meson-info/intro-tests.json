@@ -1,0 +1,1 @@
+[{"cmd": ["/home/user/dev/c-ipfs/c-libp2p/c-protobuf/build/test/test_protobuf"], "env": {}, "name": "protobuf test", "workdir": null, "timeout": 30, "suite": ["c-protobuf"], "is_parallel": true, "priority": 0}]

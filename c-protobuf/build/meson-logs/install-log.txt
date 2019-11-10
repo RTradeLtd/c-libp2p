@@ -1,0 +1,5 @@
+# List of files installed by Meson
+# Does not contain files installed by custom scripts.
+tstinst/usr/local/lib/libipfs_protobuf.so
+tstinst/usr/local/include/c-ipfs/protobuf.h
+tstinst/usr/local/lib/pkgconfig/ipfs_protobuf.pc
