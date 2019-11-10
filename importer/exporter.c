@@ -147,7 +147,7 @@ int ipfs_exporter_to_file(const unsigned char* hash, const char* file_name, stru
 }
 
 /**
- * get a file by its hash, and write the data to a file
+ * get a file by its hash, and write the data to console
  * @param hash the base58 multihash of the cid
  * @param file_name the file name to write to
  * @returns true(1) on success
