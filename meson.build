@@ -57,3 +57,9 @@ libp2p_dep = declare_dependency(include_directories: libp2p_inc, link_with: libp
 
 subdir('test')
 
+pkg_mod = import('pkgconfig')
+pkg_mod.generate(libraries : libp2p_lib,
+                 version : '0.1',
+                 name : 'libp2p',
+                 filebase : 'libp2p',
+                 description : 'An implementation of Protocol Labs\' libp2p in C')
