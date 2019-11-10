@@ -5,7 +5,9 @@ cc = meson.get_compiler('c')
 mbedcrypto_dep = cc.find_library('mbedcrypto')
 resolv_dep = cc.find_library('resolv')
 
-libp2p_dep = dependency('libp2p')
+libp2p_proj = subproject('libp2p')
+libp2p_dep = libp2p_proj.get_variable('libp2p_dep')
+
 lmdb_dep = dependency('lmdb')
 curl_dep = dependency('libcurl')
 thread_dep = dependency('threads')
